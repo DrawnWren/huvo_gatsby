@@ -5,35 +5,31 @@ module.exports = {
     author: `Curt and @drawnwren`,
     menuLinks: [
       {
-        name: 'About the Team',
-        link: '/aboutus',
+        name: "About the Team",
+        link: "/aboutus",
       },
       {
-        name: 'Events',
-        link: '/events',
+        name: "Events",
+        link: "/events",
       },
       {
-        name: 'Reach Out',
-        link: '/reachout',
+        name: "Reach Out",
+        link: "/reachout",
       },
       {
-        name: 'FAQ',
-        link: '/faqs',
-      },
-      {
-        name: 'Blog',
-        link: '/blog',
+        name: "FAQ",
+        link: "/faqs",
       },
     ],
     mission:
-      'Our mission is to ullamcorper, vel facilisis diam rhoncus. Nunc porttitor at est sodales ultricies. Nullam ut odio nec libero vestibulum luctus sit amet in velit. Donec commodo semper urna. Aenean mollis est et fringilla sodales. Vestibulumsed pharetra tortor, a molestie urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam eu leo efficitur, feugiat metus in, fringilla mauris. Sed lectus metus, malesuada sit amet dui id, accumsan ultrices justo. Sed dapibus aliquet tempor. Curabitur libero leo, eleifend a massa et, finibus lobortis nisl. Aliquam sed volutpat nibh. Phasellus tempor ut ex a auctor.',
+      "Our mission is to ullamcorper, vel facilisis diam rhoncus. Nunc porttitor at est sodales ultricies. Nullam ut odio nec libero vestibulum luctus sit amet in velit. Donec commodo semper urna. Aenean mollis est et fringilla sodales. Vestibulumsed pharetra tortor, a molestie urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam eu leo efficitur, feugiat metus in, fringilla mauris. Sed lectus metus, malesuada sit amet dui id, accumsan ultrices justo. Sed dapibus aliquet tempor. Curabitur libero leo, eleifend a massa et, finibus lobortis nisl. Aliquam sed volutpat nibh. Phasellus tempor ut ex a auctor.",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        implementation: require('sass'),
+        implementation: require("sass"),
       },
     },
     {
@@ -47,7 +43,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/faqs`,
-        name: 'faqs',
+        name: "faqs",
       },
     },
     `gatsby-plugin-sharp`,
@@ -55,14 +51,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/members`,
-        name: 'members',
+        name: "members",
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/blog`,
-        name: 'blog',
+        name: "blog",
       },
     },
     {
