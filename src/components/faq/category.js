@@ -1,7 +1,7 @@
 import React from "react"
 import style from "./../../styles/faqs.module.sass"
 import PropTypes from "prop-types"
-import Collapse from "react-collapse"
+import { Collapse } from "react-collapse"
 
 import { Question } from "./../../schema.js"
 
@@ -10,7 +10,7 @@ export default class Category extends React.Component {
     super(props)
 
     this.state = {
-      clicked: false,
+      isOpened: true,
       class: "fa fa-angle-down",
     }
   }
@@ -28,7 +28,6 @@ export default class Category extends React.Component {
         }
       })
     }
-    const collapseId = `collapse${this.props.title}`
     return (
       <div className={style.category} key={this.props.title}>
         <div id={style.categoryTitle}>
@@ -44,7 +43,7 @@ export default class Category extends React.Component {
         >
           <i className={this.state.class} onClick={updateClass} />
         </a>
-        <div id={collapseId}>
+      <Collapse isOpened={this.state.isOpened}>
           <div className={style.faqs} id={collapseId}>
             {this.props.questions.map((question, i) => (
               <div className={style.faq} key={style.question + i}>
